@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="left|right"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/menu"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/chooseYrTo"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/DerivataID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/derivativebutton"
+        android:textSize="50px" />
+
+    <Button
+        android:id="@+id/TrigonometryID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Trigonometry"
+        android:textSize="50px" />
+
+    <Button
+        android:id="@+id/EquationsID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Equations"
+        android:textSize="50px" />
+
+    <Button
+        android:id="@+id/AlgebraID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Algebra"
+        android:textSize="50px" />
+
+    <Button
+        android:id="@+id/PolynomialID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Polynomial"
+        android:textSize="50px" />
+
+    <Button
+        android:id="@+id/RatExpID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Rational Expressions"
+        android:textSize="50px" />
+
+</LinearLayout>

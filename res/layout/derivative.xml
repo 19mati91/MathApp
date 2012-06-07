@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+
+    <TextView
+        android:id="@+id/derivativeText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_vertical"
+        android:text="@string/derivativeText"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="50px"
+		android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/DerivativeVidsID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/DerivativeVidsID"
+        android:textSize="25px" />
+
+    <Button
+        android:id="@+id/QuizID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/DerivativeQuiz"
+        android:textSize="25px" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Derivate text"
+        android:textSize="25px" />
+
+</LinearLayout>

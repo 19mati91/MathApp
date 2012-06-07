@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MathIsFunActivity!</string>
+    <string name="app_name">MathIsFun</string>
+    <string name="Menu"/>
+    <string name="menu">Menu</string>
+    <string name="chooseYrTo">Choose Your Topic</string>
+    <string name="derivativebutton">Derivative</string>
+    <string name="derivativeText">Derivative</string>
+    <string name="VideoID">Video</string>
+    <string name="DerivativeVidsID">Derivative Videos</string>
+    <string name="DerivativeQuiz">Derivatives Quiz</string>
+
+</resources>

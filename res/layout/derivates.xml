@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    
+
+    
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Derivative In calculus, a branch of mathematics, the derivative is a measure of how a function changes as its input changes. Loosely speaking, a derivative can be thought of as how much one quantity is changing in response to changes in some other quantity; for example, the derivative of the position of a moving object with respect to time is the object&apos;s instantaneous velocity.
+The derivative of a function at a chosen input value describes the best linear approximation of the function near that input value. For a real-valued function of a single real variable, the derivative at a point equals the slope of the tangent line to the graph of the function at that point. In higher dimensions, the derivative of a function at a point is a linear transformation called the linearization.[1] A closely related notion is the differential of a function.
+The process of finding a derivative is called differentiation. The reverse process is called antidifferentiation. The fundamental theorem of calculus states that antidifferentiation is the same as integration. Differentiation and integration constitute the two fundamental operations in single-variable calculus." />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Example
+The squaring function f(x) = x² is differentiable at x = 3, and its derivative there is 6. This result is established by calculating the limit as h approaches zero of the difference quotient of f(3):
+
+The last expression shows that the difference quotient equals 6 + h when h ≠ 0 and is undefined when h = 0, because of the definition of the difference quotient. However, the definition of the limit says the difference quotient does not need to be defined when h = 0. The limit is the result of letting h go to zero, meaning it is the value that 6 + h tends to as h becomes very small:
+
+Hence the slope of the graph of the squaring function at the point (3, 9) is 6, and so its derivative at x = 3 is f '(3) = 6.
+More generally, a similar computation shows that the derivative of the squaring function at x = a is f '(a) = 2a." />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Continuity and differentiability If y = f(x) is differentiable at a, then f must also be continuous at a. As an example, choose a point a and let f be the step function that returns a value, say 1, for all x less than a, and returns a different value, say 10, for all x greater than or equal to a. f cannot have a derivative at a. If h is negative, then a + h is on the low part of the step, so the secant line from a to a + h is very steep, and as h tends to zero the slope tends to infinity. If h is positive, then a + h is on the high part of the step, so the secant line from a to a + h has slope zero. Consequently the secant lines do not approach any single slope, so the limit of the difference quotient does not exist. However, even if a function is continuous at a point, it may not be differentiable there. For example, the absolute value function y = |x| is continuous at x = 0, but it is not differentiable there. If h is positive, then the slope of the secant line from 0 to h is one, whereas if h is negative, then the slope of the secant line from 0 to h is negative one. This can be seen graphically as a 'kink' or a 'cusp' in the graph at x = 0. Even a function with a smooth graph is not differentiable at a point where its tangent is vertical: For instance, the function y = x1/3 is not differentiable at x = 0.
+In summary: for a function f to have a derivative it is necessary for the function f to be continuous, but continuity alone is not sufficient.
+Most functions that occur in practice have derivatives at all points or at almost every point. Early in the history of calculus, many mathematicians assumed that a continuous function was differentiable at most points. Under mild conditions, for example if the function is a monotone function or a Lipschitz function, this is true. However, in 1872 Weierstrass found the first example of a function that is continuous everywhere but differentiable nowhere. This example is now known as the Weierstrass function. In 1931, Stefan Banach proved that the set of functions that have a derivative at some point is a meager set in the space of all continuous functions.[5] Informally, this means that hardly any continuous functions have a derivative at even one point." />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The derivative as a function
+Let f be a function that has a derivative at every point a in the domain of f. Because every point a has a derivative, there is a function that sends the point a to the derivative of f at a. This function is written f′(x) and is called the derivative function or the derivative of f. The derivative of f collects all the derivatives of f at all the points in the domain of f.
+Sometimes f has a derivative at most, but not all, points of its domain. The function whose value at a equals f′(a) whenever f′(a) is defined and elsewhere is undefined is also called the derivative of f. It is still a function, but its domain is strictly smaller than the domain of f.
+Using this idea, differentiation becomes a function of functions: The derivative is an operator whose domain is the set of all functions that have derivatives at every point of their domain and whose range is a set of functions. If we denote this operator by D, then D(f) is the function f′(x). Since D(f) is a function, it can be evaluated at a point a. By the definition of the derivative function, D(f)(a) = f′(a).
+For comparison, consider the doubling function f(x) = 2x; f is a real-valued function of a real number, meaning that it takes numbers as inputs and has numbers as outputs:
+
+The operator D, however, is not defined on individual numbers. It is only defined on functions:
+
+Because the output of D is a function, the output of D can be evaluated at a point. For instance, when D is applied to the squaring function,
+
+D outputs the doubling function,
+
+which we named f(x). This output function can then be evaluated to get f(1) = 2, f(2) = 4, and so on." />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Higher derivatives
+Let f be a differentiable function, and let f′(x) be its derivative. The derivative of f′(x) (if it has one) is written f′′(x) and is called the second derivative of f. Similarly, the derivative of a second derivative, if it exists, is written f′′′(x) and is called the third derivative of f. These repeated derivatives are called higher-order derivatives.
+If x(t) represents the position of an object at time t, then the higher-order derivatives of x have physical interpretations. The second derivative of x is the derivative of x′(t), the velocity, and by definition this is the object's acceleration. The third derivative of x is defined to be the jerk, and the fourth derivative is defined to be the jounce.
+A function f need not have a derivative, for example, if it is not continuous. Similarly, even if f does have a derivative, it may not have a second derivative. For example, let
+
+Calculation shows that f is a differentiable function whose derivative is
+
+f′(x) is twice the absolute value function, and it does not have a derivative at zero. Similar examples show that a function can have k derivatives for any non-negative integer k but no (k + 1)-order derivative. A function that has k successive derivatives is called k times differentiable. If in addition the kth derivative is continuous, then the function is said to be of differentiability class Ck. (This is a stronger condition than having k derivatives. For an example, see differentiability class.) A function that has infinitely many derivatives is called infinitely differentiable or smooth.
+On the real line, every polynomial function is infinitely differentiable. By standard differentiation rules, if a polynomial of degree n is differentiated n times, then it becomes a constant function. All of its subsequent derivatives are identically zero. In particular, they exist, so polynomials are smooth functions.
+The derivatives of a function f at a point x provide polynomial approximations to that function near x. For example, if f is twice differentiable, then
+
+in the sense that
+
+If f is infinitely differentiable, then this is the beginning of the Taylor series for f." />
+                
+
+			
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content">
+<VideoView
+   android:id="@+id/myvideoview"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content" />
+</LinearLayout>
+</LinearLayout>
