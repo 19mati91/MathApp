@@ -2,10 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center|fill_horizontal|top"
-    android:orientation="vertical" 
-    android:background="@drawable/background"
-    >
+    android:orientation="vertical"
+    android:background="@drawable/background" >
 
     <TextView
         android:id="@+id/textView1"
@@ -13,95 +11,33 @@
         android:layout_height="wrap_content"
         android:text="Result of Quiz"
         android:gravity="center"
+        android:textSize="20dp"
         android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/viewq1"
+        android:id="@+id/textView2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Medium Text"
-        android:gravity="center"
+        android:text="Your final score is:"
         android:textColor="#000000"
-        />
-
-    <TextView
-        android:id="@+id/resultview1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" 
-        android:textColor="#000000"/>
-
-    <TextView
-        android:id="@+id/viewq2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medium Text"
-        android:gravity="center"
-        android:textColor="#000000"
-         />
-
-    <TextView
-        android:id="@+id/answer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" 
-        android:textColor="#000000"/>
-        
-
-    <TextView
-        android:id="@+id/viewq3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medium Text"
-        android:gravity="center"
-        android:textColor="#000000"
-         />
-
-    <TextView
-        android:id="@+id/answer3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" 
-        android:textColor="#000000"/>
-
-    <TextView
-        android:id="@+id/viewq4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medium Text"
-        android:gravity="center"
-        android:textColor="#000000" />
-
-    <TextView
-        android:id="@+id/answer4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" 
-        android:textColor="#000000"/>
-
-    <TextView
-        android:id="@+id/viewq5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medium Text"
-        android:gravity="center"
-        android:textColor="#000000" />
-
-    <TextView
-        android:id="@+id/answer5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#000000" />
+        android:textSize="25dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/finale"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" 
-        android:textSize="30dp"
+        android:text=""
+        android:textSize="25dp"
         android:textColor="#000000"
-        android:gravity="center"/>
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000" >
+    </ListView>
 
 </LinearLayout>

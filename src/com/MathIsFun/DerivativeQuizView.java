@@ -5,9 +5,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+
+import com.MathIsFun.Result.NextActivity;
 
 import android.R.string;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -39,6 +43,7 @@ public class DerivativeQuizView extends Activity implements OnClickListener {
 	TextView quizView; // A textview that displays current question
 	ImageView imageView;
 	Quiz q;
+	ArrayList<Question> wronglist = new ArrayList<Question>();
 
 	int score = 0; // Increases by one for every correct answer
 	private Object correctAnwer;
@@ -49,12 +54,12 @@ public class DerivativeQuizView extends Activity implements OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		// Layout is specified and focused on, derviatesq is displayed
 		setContentView(R.layout.derivatesq);
 		// An object of the class Quiz is created and quiz.xml retrieved
-		q = (Quiz) getIntent().getSerializableExtra("quiz"); 												
-															
+		q = (Quiz) getIntent().getSerializableExtra("quiz");
+
 		Log.i("TEST", q.toString());
 
 		quizView = (TextView) findViewById(R.id.tvQuestion1);
@@ -81,60 +86,41 @@ public class DerivativeQuizView extends Activity implements OnClickListener {
 
 	private void Question() {
 		// Kontrollera counter och antal frågor i q
-		if(counter < 5){
-		int i;
-		// Om frågan finns...
-		
-		// TODO Auto-generated method stub
-		quizView.setText(q.getQuestion(counter).question);
-		imageView.setImageBitmap(getBitmapFromURL(q.getQuestion(counter).imgUrl));
-		q1.setText(q.getQuestion(counter).answers[0].text);
-		q2.setText(q.getQuestion(counter).answers[1].text);
-		q3.setText(q.getQuestion(counter).answers[2].text);
-		q4.setText(q.getQuestion(counter).answers[3].text);
+		if (counter < q.questions.size()) {
+			
+			// Om frågan finns...
 
-		for(i = 0; i < q.getQuestion(counter).answers.length; i++){
-			if (q.getQuestion(counter).answers[i].correct == true){
-				correctAnwer = q.getQuestion(counter).answers[i].text;				
-			}	
+			// TODO Auto-generated method stub
+			quizView.setText(q.getQuestion(counter).question);
+			imageView
+					.setImageBitmap(getBitmapFromURL(q.getQuestion(counter).imgUrl));
+			q1.setText(q.getQuestion(counter).answers[0].text);
+			q2.setText(q.getQuestion(counter).answers[1].text);
+			q3.setText(q.getQuestion(counter).answers[2].text);
+			q4.setText(q.getQuestion(counter).answers[3].text);
+
+			for (int i = 0; i < q.getQuestion(counter).answers.length; i++) {
+				if (q.getQuestion(counter).answers[i].correct == true) {
+					correctAnwer = q.getQuestion(counter).answers[i].text;
+				}
 			}
-	
+
+		} else {
+			Intent Result = new Intent(DerivativeQuizView.this, NextActivity.class);
+			DerivativeQuizView.this.startActivity(Result);
+			//Results();
 		}
-		else{
-			Results();
-		}
+
 		
-		// Annars ny intent till resultat
-		// hitta den som har correct
 	}
-	
 
-	public void Results() {
-		setContentView(R.layout.result);
-		TextView result = (TextView) findViewById(R.id.finale);
-		result.setText("Your final score is: " + score + " out of " + counter);
-		
-
+//	public void Results() {
+//		setContentView(R.layout.result);
 //		TextView result = (TextView) findViewById(R.id.finale);
-//		result.setText("Your final score is: " + counter);
+//		result.setText(score + " out of " + counter);
 //
-//		TextView answer1 = (TextView) findViewById(R.id.resultview1);
-//		answer1.setText("The correct answer was: -3");
-//
-//		TextView answer2 = (TextView) findViewById(R.id.answer2);
-//		answer2.setText("The correct answer was: -6");
-//
-//		TextView answer3 = (TextView) findViewById(R.id.answer3);
-//		answer3.setText("The correct answer was: -6");
-//
-//		TextView answer4 = (TextView) findViewById(R.id.answer4);
-//		answer4.setText("The correct answer was: -3");
-//
-//		TextView answer5 = (TextView) findViewById(R.id.answer5);
-//		answer5.setText("The correct answer was: -7");
-		}
-
-		
+//		
+//	}
 
 	public void onClick(View v) {
 		if (v.getId() == R.id.btn1) {
@@ -148,13 +134,23 @@ public class DerivativeQuizView extends Activity implements OnClickListener {
 		}
 		
 		Button b = (Button) v;
-		boolean answer_was_correct = b.getText().toString().equals(correctAnwer);
+		boolean answer_was_correct = b.getText().toString()
+				.equals(correctAnwer);
+
+
+		//Log.i("Hej",correctAnwer+ "   "+b.getText() );
 		
+		if (answer_was_correct) {
+			score++;
+		} else {
+			q.questions.get(counter);
+			wronglist.add(q.questions.get(counter));
+		}
 		counter++;
-		//score++;
-		Question(); // The method Question1 is called
+
+		Question(); // The method Question is called
 	}
-	
+
 	public static Bitmap getBitmapFromURL(String src) {
 		try {
 			Log.e("src", src);
@@ -190,8 +186,4 @@ public class DerivativeQuizView extends Activity implements OnClickListener {
 	}
 
 }
-
-// gör en layout för texview
-// Log.i("quizview", q.getQuestion(1) );
-// printa ut xml texten i QuizView. efter den har parsat-
 

@@ -4,6 +4,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import android.util.Log;
+
 public class MyDefaultHandler extends DefaultHandler {
 	boolean quiz = false;
 	boolean Q = false;
@@ -67,7 +69,8 @@ public class MyDefaultHandler extends DefaultHandler {
 			allAnswers[answerIndex] = new Answer();
 			
 			allAnswers[answerIndex].text = attributes.getValue("text");
-			allAnswers[answerIndex].correct = Boolean.getBoolean(attributes.getValue("correct"));
+			allAnswers[answerIndex].correct = Boolean.parseBoolean(attributes.getValue("correct"));
+			
 
 			answerIndex++;
 		}

@@ -24,6 +24,7 @@
         <activity android:label="Derivata Video" android:name=".DerivativeVideo"></activity>
         <activity android:label="Derivate Quiz" android:name=".DerivatesQuiz"></activity>
         <activity android:name=".DerivativeQuizView"></activity>
+        <activity android:name="Result"></activity>
     </application>
 
 </manifest>
